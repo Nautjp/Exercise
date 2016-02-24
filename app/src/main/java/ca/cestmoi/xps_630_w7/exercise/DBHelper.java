@@ -30,13 +30,22 @@ public class DBHelper  extends SQLiteOpenHelper {
                 + Aliments.KEY_property + " TEXT)";
 
         db.execSQL(CREATE_TABLE_ALIMENTS);
+        String CREATE_TABLE_RECETTES = "CREATE TABLE " + Recettes.TABLE  + "("
+                + Recettes.KEY_ID  + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
+                + Recettes.KEY_name + " TEXT, "
+                + Recettes.KEY_qte + " INTEGER, "
+                + Recettes.KEY_type + " TEXT, "
+                + Recettes.KEY_marque + " TEXT, "
+                + Recettes.KEY_property + " TEXT)";
 
+        db.execSQL(CREATE_TABLE_RECETTES);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop older table if existed, all data will be gone!!!
         db.execSQL("DROP TABLE IF EXISTS " + Aliments.TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + Recettes.TABLE);
 
         // Create tables again
         onCreate(db);
