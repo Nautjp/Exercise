@@ -32,11 +32,10 @@ public class DBHelper  extends SQLiteOpenHelper {
         db.execSQL(CREATE_TABLE_ALIMENTS);
         String CREATE_TABLE_RECETTES = "CREATE TABLE " + Recettes.TABLE  + "("
                 + Recettes.KEY_ID  + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
-                + Recettes.KEY_name + " TEXT, "
-                + Recettes.KEY_qte + " INTEGER, "
-                + Recettes.KEY_type + " TEXT, "
-                + Recettes.KEY_marque + " TEXT, "
-                + Recettes.KEY_property + " TEXT)";
+                + Recettes.KEY_title + " TEXT, "
+                + Recettes.KEY_time + " INTEGER, "
+                + Recettes.KEY_description + " TEXT, "
+                + Recettes.KEY_moreinfo + " TEXT, ";
 
         db.execSQL(CREATE_TABLE_RECETTES);
     }

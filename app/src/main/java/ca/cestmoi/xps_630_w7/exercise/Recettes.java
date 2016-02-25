@@ -6,11 +6,10 @@ public class Recettes {
 
     // Labels Table Columns names
     public static final String KEY_ID = "id";
-    public static final String KEY_name = "name";
-    public static final String KEY_marque = "marque";
-    public static final String KEY_qte = "qte";
-    public static final String KEY_type = "type";
-    public static final String KEY_property = "property";
+    public static final String KEY_title = "title";
+    public static final String KEY_time = "time";
+    public static final String KEY_description = "description";
+    public static final String KEY_moreinfo = "moreinfo";
 
     // property help us to keep data
     public int aliments_ID;
