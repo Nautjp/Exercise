@@ -15,8 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="ca.cestmoi.xps_630_w7.exercise.accueil"
-            android:label="@string/app_name"
+            android:name="ca.cestmoi.xps_630_w7.exercise.MainEntry"
+            android:label="@string/title_activity_main_entry"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +28,30 @@
             android:name="ca.cestmoi.xps_630_w7.exercise.AlimentsDetail"
             android:label="@string/title_activity_aliments_detail"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="ca.cestmoi.xps_630_w7.exercise.RecettesDetail"
+            android:label="@string/title_activity_recettes_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="ca.cestmoi.xps_630_w7.exercise.AlimentsAdd"
+            android:label="@string/title_activity_aliments_add"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="ca.cestmoi.xps_630_w7.exercise.AlimentsAdd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ca.cestmoi.xps_630_w7.exercise.RecettesAdd"
+            android:label="@string/title_activity_recettes_add"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="ca.cestmoi.xps_630_w7.exercise.RecettesAdd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

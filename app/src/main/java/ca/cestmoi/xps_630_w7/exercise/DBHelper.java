@@ -35,7 +35,7 @@ public class DBHelper  extends SQLiteOpenHelper {
                 + Recettes.KEY_title + " TEXT, "
                 + Recettes.KEY_time + " INTEGER, "
                 + Recettes.KEY_description + " TEXT, "
-                + Recettes.KEY_moreinfo + " TEXT, ";
+                + Recettes.KEY_moreinfo + " TEXT) ";
 
         db.execSQL(CREATE_TABLE_RECETTES);
     }

@@ -9,8 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".accueil"
-            android:label="@string/app_name"
+            android:name=".MainEntry"
+            android:label="@string/title_activity_main_entry"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,32 @@
         <activity
             android:name=".AlimentsDetail"
             android:label="@string/title_activity_aliments_detail"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RecettesDetail"
+            android:label="@string/title_activity_recettes_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AlimentsAdd"
+            android:label="@string/title_activity_aliments_add"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="ca.cestmoi.xps_630_w7.exercise.AlimentsAdd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecettesAdd"
+            android:label="@string/title_activity_recettes_add"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="ca.cestmoi.xps_630_w7.exercise.RecettesAdd" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

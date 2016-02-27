@@ -248,7 +248,11 @@
     <string name="app_name">Exercise</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_aliments_add">AlimentsAdd</string>
     <string name="title_activity_aliments_detail">AlimentsDetail</string>
+    <string name="title_activity_main_entry">MainEntry</string>
+    <string name="title_activity_recettes_add">RecettesAdd</string>
+    <string name="title_activity_recettes_detail">recettes_detail</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

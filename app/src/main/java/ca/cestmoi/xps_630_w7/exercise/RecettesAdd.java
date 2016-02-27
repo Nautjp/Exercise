@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-public class accueil extends ListActivity  implements android.view.View.OnClickListener{
+public class RecettesAdd extends ListActivity  implements android.view.View.OnClickListener{
 
     Button btnAdd,btnGetAll;
     TextView aliments_Id;
@@ -39,15 +39,15 @@ public class accueil extends ListActivity  implements android.view.View.OnClickL
     public void onClick(View view) {
         if (view== findViewById(R.id.btnAdd)){
 
-            Intent intent = new Intent(this,AlimentsDetail.class);
+            Intent intent = new Intent(this,RecettesDetail.class);
             intent.putExtra("aliments_Id",0);
             startActivity(intent);
 
         }else {
 
-            AlimentsRepo repo = new AlimentsRepo(this);
+            RecettesRepo repo = new RecettesRepo(this);
 
-            ArrayList<HashMap<String, String>> alimentsList =  repo.getAlimentsList();
+            ArrayList<HashMap<String, String>> alimentsList =  repo.getRecettesList();
             if(alimentsList.size()!=0) {
                 ListView lv = getListView();
                 lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -55,12 +55,12 @@ public class accueil extends ListActivity  implements android.view.View.OnClickL
                     public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
                         aliments_Id = (TextView) view.findViewById(R.id.aliments_Id);
                         String alimentsId = aliments_Id.getText().toString();
-                        Intent objIndent = new Intent(getApplicationContext(),AlimentsDetail.class);
+                        Intent objIndent = new Intent(getApplicationContext(),RecettesDetail.class);
                         objIndent.putExtra("aliments_Id", Integer.parseInt( alimentsId));
                         startActivity(objIndent);
                     }
                 });
-                ListAdapter adapter = new SimpleAdapter( accueil.this,alimentsList, R.layout.view_aliments_entry, new String[] { "id","name"}, new int[] {R.id.aliments_Id, R.id.aliments_name});
+                ListAdapter adapter = new SimpleAdapter( RecettesAdd.this,alimentsList, R.layout.view_aliments_entry, new String[] { "id","name"}, new int[] {R.id.aliments_Id, R.id.aliments_name});
                 setListAdapter(adapter);
             }else{
                 Toast.makeText(this,"No aliments!",Toast.LENGTH_SHORT).show();
@@ -72,7 +72,7 @@ public class accueil extends ListActivity  implements android.view.View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accueil);
+        setContentView(R.layout.activity_aliments_add);
 
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnAdd.setOnClickListener(this);

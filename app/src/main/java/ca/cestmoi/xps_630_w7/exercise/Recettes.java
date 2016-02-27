@@ -12,10 +12,9 @@ public class Recettes {
     public static final String KEY_moreinfo = "moreinfo";
 
     // property help us to keep data
-    public int aliments_ID;
-    public String name;
-    public String marque;
-    public int qte;
-    public String type;
-    public String property;
+    public int recettes_ID;
+    public String title;
+    public int time;
+    public String description;
+    public String moreinfo;
 }

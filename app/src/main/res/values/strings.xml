@@ -2,4 +2,8 @@
     <string name="app_name">Exercise</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_aliments_detail">AlimentsDetail</string>
+    <string name="title_activity_recettes_detail">recettes_detail</string>
+    <string name="title_activity_aliments_add">AlimentsAdd</string>
+    <string name="title_activity_recettes_add">RecettesAdd</string>
+    <string name="title_activity_main_entry">MainEntry</string>
 </resources>
